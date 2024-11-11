@@ -93,3 +93,13 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Gaya Umum untuk halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/free-vector/top-view-cup-coffee-with-roasted-beans_52683-32340.jpg'); /* Ganti dengan link gambar yang diinginkan */
+    background-size: cover;  /* Membuat gambar memenuhi seluruh layar */
+    background-position: center;  /* Memposisikan gambar di tengah */
+    background-attachment: fixed;  /* Agar gambar tetap ketika scroll */
+}
