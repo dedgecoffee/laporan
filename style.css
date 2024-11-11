@@ -1,0 +1,116 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.order-form label {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+}
+
+.order-form select,
+.order-form input[type="text"],
+.order-form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.order-form select:focus,
+.order-form input[type="text"]:focus,
+.order-form input[type="number"]:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.1);
+}
+
+.order-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-form button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.order-form button:active {
+    background-color: #1e7e34;
+    transform: translateY(1px);
+}
+
+/* Styling untuk tombol "Hitung Total" agar terlihat berbeda */
+.order-form button[type="button"] {
+    background-color: #007bff;
+}
+
+.order-form button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+.order-form button[type="button"]:active {
+    background-color: #004085;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .order-form label,
+    .order-form select,
+    .order-form input,
+    .order-form button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,112 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://i.ytimg.com/vi/Kgz0qyZXJ9I/mqdefault.jpg') no-repeat center center fixed;
+    background-size: cover; /* Membuat gambar menutupi seluruh halaman */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Container untuk laporan */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Background putih dengan transparansi untuk kontras */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Heading Laporan */
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Laporan Order */
+.order-summary {
+    text-align: left;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.order-summary strong {
+    color: #0077b6;
+}
+
+/* Styling untuk tombol "Kembali" */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #00b4d8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0077b6;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #005f82;
+    transform: translateY(1px);
+}
+
+/* Styling untuk informasi order */
+#summary-item,
+#summary-jumlah,
+#summary-harga,
+#summary-total {
+    font-weight: bold;
+    color: #0077b6;
+}
+
+/* Responsif Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .order-summary p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

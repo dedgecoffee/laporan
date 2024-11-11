@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Orderan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Laporan Orderan</h1>
+        <div id="order-summary" class="order-summary">
+            <p><strong>Menu:</strong> <span id="summary-item"></span></p>
+            <p><strong>Jumlah:</strong> <span id="summary-jumlah"></span></p>
+            <p><strong>Harga per Item:</strong> Rp <span id="summary-harga"></span></p>
+            <p><strong>Total Harga:</strong> Rp <span id="summary-total"></span></p>
+        </div>
+        <button onclick="window.history.back()">Kembali</button>
+    </div>
+
+    <script>
+        // Ambil parameter dari URL
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("summary-item").textContent = params.get("item");
+        document.getElementById("summary-jumlah").textContent = params.get("jumlah");
+        document.getElementById("summary-harga").textContent = params.get("harga");
+        document.getElementById("summary-total").textContent = params.get("total");
+    </script>
+</body>
+</html>

@@ -1,98 +1,37 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Pesanan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        input, select, textarea, button {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0 20px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            border: none;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #888;
-        }
-
-        .footer a {
-            text-decoration: none;
-            color: #4CAF50;
-        }
-    </style>
+    <title>Orderan Kafe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Pemesanan Menu Kafe</h1>
+        <form id="order-form" class="order-form" onsubmit="submitOrder(event)">
+            <label for="item">Pilih Menu:</label>
+            <select id="item" name="item" onchange="updateHarga()">
+                <option value="kopi" data-price="30000">Kopi - Rp 30,000</option>
+                <option value="teh" data-price="15000">Teh - Rp 15,000</option>
+                <option value="jus" data-price="25000">Jus Buah - Rp 25,000</option>
+                <option value="kue" data-price="30000">Kue - Rp 30,000</option>
+            </select>
 
-<div class="container">
-    <h1>Form Pemesanan</h1>
-    <form action="order-submit.html" method="POST">
-        <label for="nama">Nama Pemesan</label>
-        <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" value="1" min="1" onchange="hitungTotal()">
 
-        <label for="produk">Pilih Produk</label>
-        <select id="produk" name="produk" required>
-            <option value="produk1">Produk 1</option>
-            <option value="produk2">Produk 2</option>
-            <option value="produk3">Produk 3</option>
-        </select>
+            <label for="harga">Harga per Item:</label>
+            <input type="text" id="harga" name="harga" value="30000" readonly>
 
-        <label for="jumlah">Jumlah</label>
-        <input type="number" id="jumlah" name="jumlah" required min="1" placeholder="Masukkan jumlah produk">
+            <label for="total">Total Harga:</label>
+            <input type="text" id="total" name="total" readonly>
 
-        <label for="alamat">Alamat Pengiriman</label>
-        <textarea id="alamat" name="alamat" required placeholder="Masukkan alamat lengkap"></textarea>
+            <!-- <button type="button" onclick="hitungTotal()">Hitung Total</button> -->
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </div>
 
-        <button type="submit">Pesan Sekarang</button>
-    </form>
-</div>
-
-<div class="footer">
-    <p>&copy; 2024 - Semua Hak Dilindungi. <a href="terms.html">Syarat dan Ketentuan</a></p>
-</div>
-
+    <script src="script.js"></script>
 </body>
 </html>
