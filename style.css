@@ -1,116 +1,95 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Gaya Umum untuk halaman */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
 }
 
+/* Kontainer untuk form */
 .container {
-    max-width: 500px;
     width: 100%;
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Judul Form */
 h1 {
+    text-align: center;
     color: #333;
-    font-size: 24px;
-    margin-bottom: 30px;
 }
 
-.order-form label {
+/* Form Label */
+label {
     font-size: 16px;
-    color: #555;
-    margin-top: 15px;
-    margin-bottom: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
     display: block;
-    text-align: left;
+    color: #555;
 }
 
-.order-form select,
-.order-form input[type="text"],
-.order-form input[type="number"] {
+/* Gaya untuk Select Box */
+select {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
+    max-width: 100%;  /* Menjamin elemen mengambil lebar maksimal */
+    padding: 12px;    /* Menambah padding agar lebih nyaman */
     font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
     color: #333;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    outline: none;
+    margin-bottom: 15px; /* Jarak antar elemen */
     transition: all 0.3s ease;
 }
 
-.order-form select:focus,
-.order-form input[type="text"]:focus,
-.order-form input[type="number"]:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 8px rgba(40, 167, 69, 0.1);
+/* Efek saat Hover dan Focus pada Select */
+select:hover, select:focus {
+    border-color: #3498db;
+    background-color: #eaf3fd;
+    outline: none;
 }
 
-.order-form button {
+/* Gaya untuk Input Text dan Number */
+input[type="text"], input[type="number"] {
+    width: 95%;
+    max-width: 100%; /* Pastikan elemen mengambil lebar maksimal */
+    padding: 12px;    /* Menambah padding agar lebih nyaman */
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    margin-bottom: 15px; /* Jarak antar elemen */
+}
+
+/* Gaya untuk Button */
+button {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #28a745;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    margin-top: 10px; /* Jarak dari elemen sebelumnya */
 }
 
-.order-form button:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
+/* Efek Hover pada Button */
+button:hover {
+    background-color: #2980b9;
 }
 
-.order-form button:active {
-    background-color: #1e7e34;
-    transform: translateY(1px);
+/* Gaya untuk Link */
+a {
+    color: #3498db;
+    text-decoration: none;
 }
 
-/* Styling untuk tombol "Hitung Total" agar terlihat berbeda */
-.order-form button[type="button"] {
-    background-color: #007bff;
-}
-
-.order-form button[type="button"]:hover {
-    background-color: #0056b3;
-}
-
-.order-form button[type="button"]:active {
-    background-color: #004085;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 22px;
-    }
-
-    .order-form label,
-    .order-form select,
-    .order-form input,
-    .order-form button {
-        font-size: 14px;
-    }
+a:hover {
+    text-decoration: underline;
 }
