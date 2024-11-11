@@ -1,105 +1,80 @@
-/* Gaya Umum untuk halaman */
-body {
-    font-family: 'Arial', sans-serif;
+/* style.css */
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f7fc;
+    box-sizing: border-box;
 }
 
-/* Kontainer untuk form */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f4ef; /* Warna krem lembut */
+    color: #4f3f2f; /* Warna coklat tua */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .container {
-    width: 100%;
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
+    width: 90%;
+    max-width: 500px;
     background-color: #fff;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Judul Form */
 h1 {
     text-align: center;
-    color: #333;
+    font-size: 24px;
+    color: #7d5a50; /* Warna coklat muda */
+    margin-bottom: 1rem;
 }
 
-/* Form Label */
 label {
     font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    color: #4f3f2f;
+    margin-top: 1rem;
     display: block;
-    color: #555;
 }
 
-/* Gaya untuk Select Box */
+input[type="number"],
+input[type="text"],
 select {
     width: 100%;
-    max-width: 100%;  /* Menjamin elemen mengambil lebar maksimal */
-    padding: 12px;    /* Menambah padding agar lebih nyaman */
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
     font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #fafafa;
-    color: #333;
-    margin-bottom: 15px; /* Jarak antar elemen */
-    transition: all 0.3s ease;
+    color: #4f3f2f;
+    background-color: #f5f1ed; /* Warna krem muda */
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-/* Efek saat Hover dan Focus pada Select */
-select:hover, select:focus {
-    border-color: #3498db;
-    background-color: #eaf3fd;
-    outline: none;
+input[readonly] {
+    background-color: #eae7e3;
+    color: #7d5a50;
 }
 
-/* Gaya untuk Input Text dan Number */
-input[type="text"], input[type="number"] {
-    width: 100%;
-    max-width: 100%; /* Pastikan elemen mengambil lebar maksimal */
-    padding: 12px;    /* Menambah padding agar lebih nyaman */
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #fafafa;
-    margin-bottom: 15px; /* Jarak antar elemen */
-}
-
-/* Gaya untuk Button */
 button {
     width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    background-color: #3498db;
-    color: white;
+    padding: 0.7rem;
+    background-color: #7d5a50; /* Warna coklat kafe */
+    color: #fff;
+    font-size: 16px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px; /* Jarak dari elemen sebelumnya */
+    transition: background-color 0.3s ease;
 }
 
-/* Efek Hover pada Button */
 button:hover {
-    background-color: #2980b9;
+    background-color: #6a4a40;
 }
 
-/* Gaya untuk Link */
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-/* Gaya Umum untuk halaman */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://img.freepik.com/free-vector/top-view-cup-coffee-with-roasted-beans_52683-32340.jpg'); /* Ganti dengan link gambar yang diinginkan */
-    background-size: cover;  /* Membuat gambar memenuhi seluruh layar */
-    background-position: center;  /* Memposisikan gambar di tengah */
-    background-attachment: fixed;  /* Agar gambar tetap ketika scroll */
+.order-form {
+    display: flex;
+    flex-direction: column;
 }
