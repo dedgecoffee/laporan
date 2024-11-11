@@ -3,50 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Orderan Kafe</title>
+    <title>Laporan Orderan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Laporan Orderan Kafe</h1>
-
-        <div class="order-summary">
-            <p><strong>Item yang Dipesan:</strong> <span id="summary-item">Kopi</span></p>
-            <p><strong>Jumlah:</strong> <span id="summary-jumlah">2</span></p>
-            <p><strong>Harga per Item:</strong> <span id="summary-harga">Rp 30,000</span></p>
-            <p><strong>Total Harga:</strong> <span id="summary-total">Rp 60,000</span></p>
+        <h1>Laporan Orderan</h1>
+        <div id="order-summary" class="order-summary">
+            <p><strong>Menu:</strong> <span id="summary-item"></span></p>
+            <p><strong>Jumlah:</strong> <span id="summary-jumlah"></span></p>
+            <p><strong>Harga per Item:</strong> Rp <span id="summary-harga"></span></p>
+            <p><strong>Total Harga:</strong> Rp <span id="summary-total"></span></p>
         </div>
-
-        <button onclick="kirimWhatsApp()">Kirim Laporan ke WhatsApp</button>
+        <button onclick="window.history.back()">Kembali</button>
     </div>
 
     <script>
-        function kirimWhatsApp() {
-            // Ambil data dari laporan
-            var item = document.getElementById('summary-item').textContent;
-            var jumlah = document.getElementById('summary-jumlah').textContent;
-            var harga = document.getElementById('summary-harga').textContent;
-            var total = document.getElementById('summary-total').textContent;
-
-            // Format pesan yang akan dikirim
-            var pesan = "Laporan Orderan Kafe:\n";
-            pesan += "Item: " + item + "\n";
-            pesan += "Jumlah: " + jumlah + "\n";
-            pesan += "Harga per Item: " + harga + "\n";
-            pesan += "Total Harga: " + total;
-
-            // Encode pesan untuk URL
-            var pesanEncoded = encodeURIComponent(pesan);
-
-            // Nomor WhatsApp yang dituju (ganti dengan nomor admin yang sesuai)
-            var nomorWhatsApp = "6289685587547";  // Ganti dengan nomor admin
-
-            // Buat URL untuk membuka WhatsApp dengan pesan
-            var url = "https://wa.me/" + nomorWhatsApp + "?text=" + pesanEncoded;
-
-            // Buka URL WhatsApp
-            window.open(url, "_blank");
-        }
+        // Ambil parameter dari URL
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("summary-item").textContent = params.get("item");
+        document.getElementById("summary-jumlah").textContent = params.get("jumlah");
+        document.getElementById("summary-harga").textContent = params.get("harga");
+        document.getElementById("summary-total").textContent = params.get("total");
     </script>
 </body>
 </html>
