@@ -55,7 +55,7 @@ select:hover, select:focus {
 
 /* Gaya untuk Input Text dan Number */
 input[type="text"], input[type="number"] {
-    width: 94%;
+    width: 100%;
     max-width: 100%; /* Pastikan elemen mengambil lebar maksimal */
     padding: 12px;    /* Menambah padding agar lebih nyaman */
     font-size: 16px;
