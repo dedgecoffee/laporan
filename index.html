@@ -18,6 +18,16 @@
                 <option value="kuejepang" data-price="30000">Kue Jepang - Rp 30,000</option>
             </select>
 
+            <!-- Menambahkan menu Pilih Meja -->
+            <label for="meja">Pilih Meja:</label>
+            <select id="meja" name="meja">
+                <option value="1">Meja 1</option>
+                <option value="2">Meja 2</option>
+                <option value="3">Meja 3</option>
+                <option value="4">Meja 4</option>
+                <option value="5">Meja 5</option> 
+            </select>
+           
             <label for="jumlah">Jumlah:</label>
             <input type="number" id="jumlah" name="jumlah" value="1" min="1" onchange="hitungTotal()">
 
@@ -26,16 +36,6 @@
 
             <label for="total">Total Harga:</label>
             <input type="text" id="total" name="total" readonly>
-
-            <!-- Menambahkan menu Pilih Meja -->
-            <label for="meja">Pilih Meja:</label>
-            <select id="meja" name="meja">
-                <option value="1">Meja 1</option>
-                <option value="2">Meja 2</option>
-                <option value="3">Meja 3</option>
-                <option value="4">Meja 4</option>
-                <option value="5">Meja 5</option>
-            </select>
 
             <button type="submit">Pesan Sekarang</button>
         </form>
