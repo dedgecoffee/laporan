@@ -14,10 +14,21 @@
             <select id="item" name="item" onchange="updateHarga()">
                 <option value="kopikenanganmantan" data-price="30000">Kopi Kenangan Mantan - Rp 30,000</option>
                 <option value="tehamba" data-price="15000">Teh Amba - Rp 15,000</option>
+                <option value="jusbuah" data-price="25000">Jus Buah - Rp 25,000</option>
                 <option value="jusbuahzakar" data-price="25000">Jus Buah - Rp 25,000</option>
                 <option value="kuejepang" data-price="30000">Kue Jepang - Rp 30,000</option>
             </select>
 
+            <!-- Menambahkan menu Pilih Meja -->
+            <label for="meja">Pilih Meja:</label>
+            <select id="meja" name="meja">
+                <option value="1">Meja 1</option>
+                <option value="2">Meja 2</option>
+                <option value="3">Meja 3</option>
+                <option value="4">Meja 4</option>
+                <option value="5">Meja 5</option> 
+            </select>
+           
             <label for="jumlah">Jumlah:</label>
             <input type="number" id="jumlah" name="jumlah" value="1" min="1" onchange="hitungTotal()">
 
@@ -27,7 +38,6 @@
             <label for="total">Total Harga:</label>
             <input type="text" id="total" name="total" readonly>
 
-            <!-- <button type="button" onclick="hitungTotal()">Hitung Total</button> -->
             <button type="submit">Pesan Sekarang</button>
         </form>
     </div>
