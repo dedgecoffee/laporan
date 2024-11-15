@@ -21,6 +21,8 @@
             <p><strong>Total Harga:</strong> Rp <span id="summary-total"></span></p>
         </div>
         <button onclick="window.history.back()">Kembali</button>
+        <button class="next-button" onclick="redirectToWebsite()">Selanjutnya</button>
+
     </div>
 
     <script>
@@ -30,6 +32,11 @@
         document.getElementById("summary-jumlah").textContent = params.get("jumlah");
         document.getElementById("summary-harga").textContent = params.get("harga");
         document.getElementById("summary-total").textContent = params.get("total");
+
+        // Fungsi untuk redirect ke website lain
+        function redirectToWebsite() {
+            window.location.href = "https://dedgecoffee.id.biz.id/payment/"; // Ganti URL ini dengan tujuan Anda
+        }
     </script>
 </body>
 </html>
